@@ -1,5 +1,6 @@
 import Header from "./layouts/Header";
 import Budget from "./components/Budget";
+import BudgetData from "./components/BudgetData";
 
 function App() {
     const currentDate = new Date();
@@ -14,6 +15,7 @@ function App() {
         <div>
             <Header/>
             <Budget month={currentMonth} year={currentYear}/>
+            <BudgetData/>
         </div>
     );
 }
