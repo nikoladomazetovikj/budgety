@@ -3,10 +3,11 @@ import Card from "../UI/Card";
 function Budget(props) {
 
     return (
+        <>
         <div className='margin-2 container-fluid'>
             <div className='container'>
               <div className='row'>
-                  <h3 className='text-center'>Your Monthly Budget for {props.month} {props.year}</h3>
+                  <h2 className='text-center'>Your Monthly Budget for {props.month} {props.year}</h2>
               </div>
                 <div className='row margin-4'>
                    <div className='col-2 d-flex justify-content-center'>
@@ -21,6 +22,8 @@ function Budget(props) {
                 </div>
             </div>
         </div>
+            <div className='container-fluid empty-container padding-4'></div>
+        </>
     );
 }
 
