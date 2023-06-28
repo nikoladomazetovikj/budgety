@@ -25,6 +25,58 @@ code {
 }
 
 
+/*margins*/
+.margin-1 {
+  margin: 0.25rem;
+}
+
+.margin-2 {
+  margin: 0.5rem;
+}
+
+.margin-3 {
+  margin: 1rem;
+}
+
+.margin-4 {
+  margin: 1.5rem;
+}
+
+.margin-5 {
+  margin: 3rem;
+}
+
+.margin-6 {
+  margin: 4.5rem;
+}
+
+
+/*paddings*/
+.padding-1 {
+  padding: 0.25rem;
+}
+
+.padding-2 {
+  padding: 0.5rem;
+}
+
+.padding-3 {
+  padding: 1rem;
+}
+
+.padding-4 {
+  padding: 1.5rem;
+}
+
+.padding-5 {
+  padding: 3rem ;
+}
+
+.padding-6 {
+  padding: 4.5rem;
+}
+
+
 /*colors and backgrounds*/
 .navbar-dark {
   background-color: #222222;
