@@ -24,6 +24,11 @@ code {
   width: 95%;
 }
 
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
 .row::after {
   content: "";
   display: table;
@@ -124,6 +129,10 @@ code {
   justify-content: center;
 }
 
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 
 /*colors and backgrounds*/
 .navbar-dark {
@@ -171,4 +180,42 @@ code {
   color: #ffffff;
 }
 
+
+/*buttons*/
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.button-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.button-success {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.button-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.button:hover {
+  background-color: #e0e0e0;
+}
 
