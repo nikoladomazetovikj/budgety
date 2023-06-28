@@ -116,6 +116,14 @@ code {
   padding: 4.5rem;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 
 /*colors and backgrounds*/
 .navbar-dark {
@@ -126,3 +134,41 @@ code {
 .text-center {
   text-align: center;
 }
+
+/*card*/
+.card {
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card-incomes {
+  background-color: #008080;
+  color: #ffffff;
+}
+
+.card-expenses {
+  background-color: #762727;
+  color: #ffffff;
+}
+
+.card-total {
+  background-color: #222a3f;
+  color: #ffffff;
+}
+
+

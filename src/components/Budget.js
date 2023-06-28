@@ -1,3 +1,5 @@
+import Card from "../UI/Card";
+
 function Budget(props) {
 
     return (
@@ -6,18 +8,15 @@ function Budget(props) {
               <div className='row'>
                   <h3 className='text-center'>Your Monthly Budget for {props.month} {props.year}</h3>
               </div>
-                <div className='row margin-2'>
-                   <div className='col-2'>
-                       <h3 className='text-center'>Income</h3>
-                       <h3 className='text-center'>Expenses</h3>
+                <div className='row margin-4'>
+                   <div className='col-2 d-flex justify-content-center'>
+                      <Card cardColor='card-incomes' cardTitle='Income'/>
                    </div>
-                    <div className='col-2'>
-                        <h3 className='text-center'>Income</h3>
-                        <h3 className='text-center'>Expenses</h3>
+                    <div className='col-2 d-flex justify-content-center'>
+                      <Card cardColor='card-total' cardTitle='Total'/>
                     </div>
-                    <div className='col-2'>
-                        <h3 className='text-center'>Income</h3>
-                        <h3 className='text-center'>Expenses</h3>
+                    <div className='col-2 d-flex justify-content-center'>
+                       <Card cardColor='card-expenses' cardTitle='Expenses'/>
                     </div>
                 </div>
             </div>
