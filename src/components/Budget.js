@@ -12,7 +12,7 @@ function Budget(props) {
               </div>
                 <div className='row margin-4'>
                    <div className='col-2 d-flex justify-content-center'>
-                      <Card cardColor='card-incomes' cardTitle='Income'/>
+                      <Card cardColor='card-incomes' cardTitle='Incomes'/>
                    </div>
                     <div className='col-2 d-flex justify-content-center'>
                       <Card cardColor='card-total' cardTitle='Total'/>
