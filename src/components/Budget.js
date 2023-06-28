@@ -1,4 +1,5 @@
 import Card from "../UI/Card";
+import AddData from "./AddData";
 
 function Budget(props) {
 
@@ -22,7 +23,9 @@ function Budget(props) {
                 </div>
             </div>
         </div>
-            <div className='container-fluid empty-container padding-4'></div>
+            <div className='container-fluid empty-container padding-4'>
+                <AddData/>
+            </div>
         </>
     );
 }
