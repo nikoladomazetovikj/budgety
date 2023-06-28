@@ -24,6 +24,46 @@ code {
   width: 95%;
 }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-1 {
+  float: left;
+  width: 16.66667%;
+}
+
+.col-2 {
+  float: left;
+  width: 33.33333%;
+}
+
+.col-3 {
+  float: left;
+  width: 50%;
+}
+
+.col-4 {
+  float: left;
+  width: 66.66667%;
+}
+
+.col-5 {
+  float: left;
+  width: 83.33333%;
+}
+
+.col-6 {
+  float: left;
+  width: 100%;
+}
 
 /*margins*/
 .margin-1 {
@@ -81,4 +121,8 @@ code {
 .navbar-dark {
   background-color: #222222;
   color: white;
+}
+
+.text-center {
+  text-align: center;
 }
