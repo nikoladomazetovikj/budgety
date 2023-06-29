@@ -1,6 +1,7 @@
 import Header from "./layouts/Header";
 import Budget from "./components/Budget";
 import BudgetData from "./components/BudgetData";
+import {useState} from "react";
 
 function App() {
     const currentDate = new Date();
