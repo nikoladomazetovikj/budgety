@@ -15,6 +15,22 @@ function App() {
     const [budgetData, setBudgetData] = useState([]);
 
     useEffect(() => {
+        const lastDayOfMonth = new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth() + 1,
+            0
+        );
+        const timeDifference = lastDayOfMonth.getTime() - currentDate.getTime();
+
+        const timeout = setTimeout(() => {
+            localStorage.removeItem("budgetData");
+        }, timeDifference);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
+
+    useEffect(() => {
         const existingBudgetData = localStorage.getItem('budgetData');
         const parsedExistingData = existingBudgetData ? JSON.parse(existingBudgetData) : [];
         setBudgetData(parsedExistingData);
