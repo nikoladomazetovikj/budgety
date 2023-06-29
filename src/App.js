@@ -73,10 +73,14 @@ function App() {
     const summary = calculateSummary();
 
 
+    const clearData = () => {
+        setBudgetData([]);
+        localStorage.removeItem("budgetData");
+    };
 
     return (
         <div>
-            <Header/>
+            <Header clearData={clearData}/>
             <Budget month={currentMonth} year={currentYear} summary={summary}/>
             <BudgetData data={budgetData} onDelete={handleOnDelete}/>
         </div>
