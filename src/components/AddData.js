@@ -18,7 +18,6 @@ function AddData() {
     };
 
     const handleOnSubmit = (event) =>  {
-        event.preventDefault();
 
         if (budget.details.trim() === '') {
             alert('Please enter the details.');
