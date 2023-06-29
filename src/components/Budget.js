@@ -3,7 +3,7 @@ import AddData from "./AddData";
 
 function Budget(props) {
 
-    console.log(props.summary)
+
     return (
         <>
         <div className='margin-2 container-fluid'>
