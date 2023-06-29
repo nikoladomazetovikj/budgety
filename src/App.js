@@ -36,11 +36,20 @@ function App() {
         setBudgetData(parsedExistingData);
     }, []);
 
+    const handleOnDelete = (id) => {
+        setBudgetData(prevData => {
+            const updatedData = prevData.filter(item => item.id !== id);
+            localStorage.setItem("budgetData", JSON.stringify(updatedData));
+            return updatedData;
+        });
+    };
+
+
     return (
         <div>
             <Header/>
             <Budget month={currentMonth} year={currentYear}/>
-            <BudgetData data={budgetData}/>
+            <BudgetData data={budgetData} onDelete={handleOnDelete}/>
         </div>
     );
 }
