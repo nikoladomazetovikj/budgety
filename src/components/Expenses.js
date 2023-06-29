@@ -1,14 +1,14 @@
 import Button from "../UI/Button";
 
-function Expenses() {
+function Expenses(props) {
     return (
         <div className="list-container">
             <h5 className='text-danger'>Expenses</h5>
             <ul className="item-list">
-                <li className="list-item">
-                    <span>Details</span>
+                {props.expense.map(item =>  <li className="list-item">
+                    <span>{item.details} - {item.amount}</span>
                     <Button title='X' styles='button-secondary'/>
-                </li>
+                </li>)}
             </ul>
         </div>
     );

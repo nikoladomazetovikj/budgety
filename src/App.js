@@ -1,7 +1,7 @@
 import Header from "./layouts/Header";
 import Budget from "./components/Budget";
 import BudgetData from "./components/BudgetData";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
     const currentDate = new Date();
@@ -12,11 +12,19 @@ function App() {
     const currentMonth = months[currentDate.getMonth()];
     const currentYear = currentDate.getFullYear();
 
+    const [budgetData, setBudgetData] = useState([]);
+
+    useEffect(() => {
+        const existingBudgetData = localStorage.getItem('budgetData');
+        const parsedExistingData = existingBudgetData ? JSON.parse(existingBudgetData) : [];
+        setBudgetData(parsedExistingData);
+    }, []);
+
     return (
         <div>
             <Header/>
             <Budget month={currentMonth} year={currentYear}/>
-            <BudgetData/>
+            <BudgetData data={budgetData}/>
         </div>
     );
 }

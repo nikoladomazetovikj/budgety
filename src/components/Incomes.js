@@ -1,14 +1,15 @@
 import Button from "../UI/Button";
 
-function Incomes() {
+function Incomes(props) {
+
     return (
         <div className="list-container">
             <h5 className='text-success'>Incomes</h5>
             <ul className="item-list">
-                    <li className="list-item">
-                        <span>Details</span>
-                        <Button title='X' styles='button-secondary'/>
-                    </li>
+                {props.income.map(item =>  <li className="list-item">
+                    <span>{item.details} - {item.amount}</span>
+                    <Button title='X' styles='button-secondary'/>
+                </li>)}
             </ul>
         </div>
     );
