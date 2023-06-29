@@ -5,7 +5,6 @@ function BudgetData(data) {
     const incomes = data.data.filter(item => item.type === 'income');
     const expenses = data.data.filter(item => item.type === 'expense');
 
-    console.log(data)
     return (
         <div className='container-fluid'>
             <div className='container margin-6'>

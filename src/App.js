@@ -44,11 +44,40 @@ function App() {
         });
     };
 
+    const calculateSummary = () => {
+        let incomeSum = 0;
+        let expenseSum = 0;
+
+        budgetData.forEach(item => {
+            const amount = parseInt(item.amount, 10); // Convert item.amount to an integer
+            if (item.type === 'income') {
+                incomeSum += amount;
+            } else if (item.type === 'expense') {
+                expenseSum += amount;
+            }
+        });
+
+        const totalSum = expenseSum > incomeSum ? incomeSum - expenseSum : incomeSum + expenseSum;
+        const incomePercentage = Math.round((incomeSum / totalSum) * 100);
+        const expensePercentage = Math.round((expenseSum / totalSum) * 100);
+
+        return {
+            incomeSum,
+            expenseSum,
+            totalSum,
+            incomePercentage,
+            expensePercentage,
+        };
+    };
+
+    const summary = calculateSummary();
+
+
 
     return (
         <div>
             <Header/>
-            <Budget month={currentMonth} year={currentYear}/>
+            <Budget month={currentMonth} year={currentYear} summary={summary}/>
             <BudgetData data={budgetData} onDelete={handleOnDelete}/>
         </div>
     );
