@@ -50,7 +50,7 @@ function AddData() {
             </select>
             <input type="text" className="add-data-input" placeholder="Enter details"  value={budget.details} onChange={handleDetailsChange} />
             <input type="number" className="add-data-input" placeholder="Enter amount"  value={budget.amount} onChange={handleAmountChange}/>
-            <Button type="submit" styles="add-data-button" title="Add"/>
+            <button type="submit" className="add-data-button">Add </button>
         </form>
     );
 }
